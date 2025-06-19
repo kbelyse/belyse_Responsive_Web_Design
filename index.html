@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <h1 class="logo">JD</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <div class="hero">
+            <h1>John Doe</h1>
+            <h2>Web Developer & Designer</h2>
+            <p>Building modern, responsive, and user-friendly web applications.</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>I'm a passionate web developer with a knack for creating visually appealing and highly functional websites. With a strong foundation in HTML, CSS, and JavaScript, I strive to deliver seamless user experiences across all devices.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">HTML5</div>
+            <div class="skill-card">CSS3</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">React</div>
+            <div class="skill-card">Node.js</div>
+            <div class="skill-card">Git</div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <h2>Work Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Frontend Developer</h3>
+                <p>Tech Corp | Jan 2023 - Present</p>
+                <ul>
+                    <li>Developed responsive web applications using HTML, CSS, and JavaScript.</li>
+                    <li>Collaborated with UX designers to improve user interfaces.</li>
+                    <li>Optimized website performance, reducing load times by 30%.</li>
+                </ul>
+            </div>
+            <div class="timeline-item">
+                <h3>Junior Web Developer</h3>
+                <p>Startup Inc. | Jun 2021 - Dec 2022</p>
+                <ul>
+                    <li>Built and maintained company websites with modern frameworks.</li>
+                    <li>Implemented SEO best practices, increasing traffic by 20%.</li>
+                    <li>Assisted in debugging and resolving cross-browser issues.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="slider">
+            <div class="slide active">
+                <h3>Portfolio Website</h3>
+                <p>A personal portfolio built with HTML, CSS, and JavaScript, showcasing my skills and projects.</p>
+            </div>
+            <div class="slide">
+                <h3>E-Commerce Platform</h3>
+                <p>A fully functional e-commerce site with product listings and cart functionality.</p>
+            </div>
+            <div class="slide">
+                <h3>Task Manager App</h3>
+                <p>A JavaScript-based app for managing tasks with real-time updates.</p>
+            </div>
+            <button class="slider-btn prev">❮</button>
+            <button class="slider-btn next">❯</button>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>B.S. in Computer Science</h3>
+            <p>University of Example | 2017 - 2021</p>
+            <p>Graduated with honors, specializing in web development and software engineering.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="form-message"></p>
+        <div class="contact-info">
+            <p>Email: john.doe@example.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>LinkedIn: linkedin.com/in/johndoe</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 John Doe. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
