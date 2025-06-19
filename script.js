@@ -3,7 +3,7 @@ const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    navLinks.classList.toggle(' Responses');
     hamburger.classList.toggle('toggle');
 });
 
@@ -41,30 +41,71 @@ nextBtn.addEventListener('click', () => {
     showSlide(currentSlide);
 });
 
+// Initialize Slider
+showSlide(currentSlide);
+
 // Contact Form Validation
 const form = document.getElementById('contact-form');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const messageInput = document.getElementById('message');
+const nameError = document.getElementById('name-error');
+const emailError = document.getElementById('email-error');
+const messageError = document.getElementById('message-error');
 const formMessage = document.getElementById('form-message');
+
+function validateName() {
+    const name = nameInput.value.trim();
+    if (name.length < 2) {
+        nameError.textContent = 'Name must be at least 2 characters long';
+        return false;
+    }
+    nameError.textContent = '';
+    return true;
+}
+
+function validateEmail() {
+    const email = emailInput.value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        emailError.textContent = 'Please enter a valid email address';
+        return false;
+    }
+    emailError.textContent = '';
+    return true;
+}
+
+function validateMessage() {
+    const message = messageInput.value.trim();
+    if (message.length < 10) {
+        messageError.textContent = 'Message must be at least 10 characters long';
+        return false;
+    }
+    messageError.textContent = '';
+    return true;
+}
+
+// Real-time validation
+nameInput.addEventListener('input', validateName);
+emailInput.addEventListener('input', validateEmail);
+messageInput.addEventListener('input', validateMessage);
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
 
-    if (name === '' || email === '' || message === '') {
-        formMessage.textContent = 'Please fill out all fields.';
-        return;
+    const isNameValid = validateName();
+    const isEmailValid = validateEmail();
+    const isMessageValid = validateMessage();
+
+    if (isNameValid && isEmailValid && isMessageValid) {
+        formMessage.textContent = 'Message sent successfully!';
+        formMessage.style.color = '#005F9E';
+        form.reset();
+        nameError.textContent = '';
+        emailError.textContent = '';
+        messageError.textContent = '';
+    } else {
+        formMessage.textContent = 'Please fix the errors above.';
+        formMessage.style.color = '#FF6F61';
     }
-
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        formMessage.textContent = 'Please enter a valid email address.';
-        return;
-    }
-
-    formMessage.textContent = 'Message sent successfully!';
-    formMessage.style.color = '#27ae60';
-    form.reset();
 });
-
-// Initialize Slider
-showSlide(currentSlide);

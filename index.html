@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Doe - Resume</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Belyse Kalisa - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav id="navbar">
         <div class="nav-container">
-            <h1 class="logo">JD</h1>
+            <h1 class="logo">BK</h1>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -28,111 +28,169 @@
         </div>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="section">
-        <div class="hero">
-            <h1>John Doe</h1>
-            <h2>Web Developer & Designer</h2>
-            <p>Building modern, responsive, and user-friendly web applications.</p>
-            <a href="#contact" class="cta-button">Get in Touch</a>
+    <!-- Hero Section -->
+    <section id="home" class="section hero">
+        <div class="hero-content">
+            <h1>Belyse Kalisa</h1>
+            <h2>Full-Stack Web Developer</h2>
+            <p>Transforming ideas into innovative, user-focused web solutions.</p>
+            <a href="#contact" class="cta-button">Let's Collaborate</a>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>I'm a passionate web developer with a knack for creating visually appealing and highly functional websites. With a strong foundation in HTML, CSS, and JavaScript, I strive to deliver seamless user experiences across all devices.</p>
+        <div class="content">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <div class="about-text">
+                    <p>I'm Belyse Kalisa, a passionate full-stack web developer based in Kigali, Rwanda. With expertise in modern web technologies, I create responsive, scalable, and visually stunning applications that solve real-world challenges. My focus is on delivering seamless user experiences while embracing creativity and innovation.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://source.unsplash.com/random/400x400?portrait,professional" alt="Belyse Kalisa">
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="section">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skill-card">HTML5</div>
-            <div class="skill-card">CSS3</div>
-            <div class="skill-card">JavaScript</div>
-            <div class="skill-card">React</div>
-            <div class="skill-card">Node.js</div>
-            <div class="skill-card">Git</div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-        <h2>Work Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h3>Frontend Developer</h3>
-                <p>Tech Corp | Jan 2023 - Present</p>
-                <ul>
-                    <li>Developed responsive web applications using HTML, CSS, and JavaScript.</li>
-                    <li>Collaborated with UX designers to improve user interfaces.</li>
-                    <li>Optimized website performance, reducing load times by 30%.</li>
-                </ul>
-            </div>
-            <div class="timeline-item">
-                <h3>Junior Web Developer</h3>
-                <p>Startup Inc. | Jun 2021 - Dec 2022</p>
-                <ul>
-                    <li>Built and maintained company websites with modern frameworks.</li>
-                    <li>Implemented SEO best practices, increasing traffic by 20%.</li>
-                    <li>Assisted in debugging and resolving cross-browser issues.</li>
-                </ul>
+        <div class="content">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card">HTML5</div>
+                <div class="skill-card">CSS3</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">React.js</div>
+                <div class="skill-card">Node.js</div>
+                <div class="skill-card">Express.js</div>
+                <div class="skill-card">MongoDB</div>
+                <div class="skill-card">Git & GitHub</div>
+                <div class="skill-card">UI/UX Design</div>
+                <div class="skill-card">RESTful APIs</div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="slider">
-            <div class="slide active">
-                <h3>Portfolio Website</h3>
-                <p>A personal portfolio built with HTML, CSS, and JavaScript, showcasing my skills and projects.</p>
+        <div class="content">
+            <h2>Projects</h2>
+            <div class="slider">
+                <div class="slide active">
+                    <img src="https://source.unsplash.com/random/600x400?ecommerce" alt="E-Commerce Platform">
+                    <h3>Rwandan E-Commerce Platform</h3>
+                    <p>A full-stack e-commerce site built with React, Node.js, and MongoDB, featuring product listings, cart functionality, and secure payment integration.</p>
+                    <a href="https://github.com/belysekalisa/ecommerce" class="project-link">View Project</a>
+                </div>
+                <div class="slide">
+                    <img src="https://source.unsplash.com/random/600x400?health,app" alt="Health Tracker App">
+                    <h3>Health Tracker App</h3>
+                    <p>A web application for tracking health metrics, developed with React and Firebase, with real-time data visualization.</p>
+                    <a href="https://github.com/belysekalisa/health-tracker" class="project-link">View Project</a>
+                </div>
+                <div class="slide">
+                    <img src="https://source.unsplash.com/random/600x400?portfolio" alt="Portfolio Website">
+                    <h3>Portfolio Website</h3>
+                    <p>This personal portfolio, built with HTML, CSS, and JavaScript, showcasing my skills with a modern, responsive design.</p>
+                    <a href="https://github.com/belysekalisa/portfolio" class="project-link">View Project</a>
+                </div>
+                <button class="slider-btn prev">❮</button>
+                <button class="slider-btn next">❯</button>
             </div>
-            <div class="slide">
-                <h3>E-Commerce Platform</h3>
-                <p>A fully functional e-commerce site with product listings and cart functionality.</p>
+        </div>
+    </section>
+
+    <!-- Video Showcase Section -->
+    <section id="showcase" class="section">
+        <div class="content">
+            <h2>Showcase</h2>
+            <div class="video-container">
+                <video controls poster="https://source.unsplash.com/random/800x450?tech">
+                    <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>A demo reel showcasing my recent web development projects.</p>
             </div>
-            <div class="slide">
-                <h3>Task Manager App</h3>
-                <p>A JavaScript-based app for managing tasks with real-time updates.</p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="content">
+            <h2>Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Full-Stack Developer</h3>
+                    <p>Tech Innovate Rwanda | Kigali | Jun 2023 - Present</p>
+                    <ul>
+                        <li>Developed scalable web applications using React and Node.js, serving over 10,000 monthly users.</li>
+                        <li>Designed RESTful APIs with Express.js and MongoDB, improving data retrieval efficiency by 25%.</li>
+                        <li>Led UI/UX enhancements, increasing user engagement by 20%.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>Junior Web Developer</h3>
+                    <p>Rwanda Coding Academy | Kigali | Jan 2022 - May 2023</p>
+                    <ul>
+                        <li>Built interactive web interfaces for educational platforms using HTML, CSS, and JavaScript.</li>
+                        <li>Contributed to open-source projects, enhancing code quality and documentation.</li>
+                        <li>Optimized website performance, reducing page load times by 15%.</li>
+                    </ul>
+                </div>
             </div>
-            <button class="slider-btn prev">❮</button>
-            <button class="slider-btn next">❯</button>
         </div>
     </section>
 
     <!-- Education Section -->
     <section id="education" class="section">
-        <h2>Education</h2>
-        <div class="education-item">
-            <h3>B.S. in Computer Science</h3>
-            <p>University of Example | 2017 - 2021</p>
-            <p>Graduated with honors, specializing in web development and software engineering.</p>
+        <div class="content">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p>University of Rwanda, College of Science and Technology | Kigali | 2018 - 2022</p>
+                <p>Graduated with First Class Honours, specializing in web development and software engineering.</p>
+            </div>
+            <div class="education-item">
+                <h3>Certificate in Full-Stack Development</h3>
+                <p>Rwanda Coding Academy | Kigali | 2021</p>
+                <p>Intensive training in modern web technologies, including React, Node.js, and MongoDB.</p>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <p id="form-message"></p>
-        <div class="contact-info">
-            <p>Email: john.doe@example.com</p>
-            <p>Phone: (123) 456-7890</p>
-            <p>LinkedIn: linkedin.com/in/johndoe</p>
+        <div class="content">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <span class="error-message" id="name-error"></span>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <span class="error-message" id="email-error"></span>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+                    <span class="error-message" id="message-error"></span>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="form-message"></p>
+            <div class="contact-info">
+                <p>Email: belyse.kalisa@example.com</p>
+                <p>Phone: (+250) 788-123-456</p>
+                <p>LinkedIn: linkedin.com/in/belysekalisa</p>
+                <p>GitHub: github.com/belysekalisa</p>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 John Doe. All rights reserved.</p>
+        <p>© 2025 Belyse Kalisa. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
