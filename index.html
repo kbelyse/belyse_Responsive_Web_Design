@@ -1,198 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belyse Kalisa - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Belyse Kalisa Teta Yamwakate</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <h1 class="logo">BK</h1>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">BKTY</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-icon" id="menuIcon">☰</div>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="section hero">
-        <div class="hero-content">
-            <h1>Belyse Kalisa</h1>
-            <h2>Full-Stack Web Developer</h2>
-            <p>Transforming ideas into innovative, user-focused web solutions.</p>
-            <a href="#contact" class="cta-button">Let's Collaborate</a>
-        </div>
+  <section class="hero">
+    <canvas id="bgCanvas"></canvas>
+    <div class="hero-content">
+      <h1>Belyse Kalisa Teta Yamwakate</h1>
+      <p>UI/UX Designer • Software Developer • Design Thinker</p>
+      <div class="scroll-down">&#8595;</div>
+    </div>
+  </section>
+
+  <main>
+    <section id="about" class="section fade-in">
+      <h2>About Me</h2>
+      <p>I’ve always had a passion for creating beautiful spaces. With a curiosity to create my own, I pursued software development and focused on UI/UX design. I blend creativity with problem-solving, creating user-friendly solutions for community and personal ventures.</p>
+      <p>I thrive in collaborative environments and adapt quickly. Planning and time management have become my strengths, especially when working under pressure. I am committed to continuous learning and growth in all I do.</p>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="content">
-            <h2>About Me</h2>
-            <div class="about-container">
-                <div class="about-text">
-                    <p>I'm Belyse Kalisa, a passionate full-stack web developer based in Kigali, Rwanda. With expertise in modern web technologies, I create responsive, scalable, and visually stunning applications that solve real-world challenges. My focus is on delivering seamless user experiences while embracing creativity and innovation.</p>
-                </div>
-                <div class="about-image">
-                    <img src="https://source.unsplash.com/random/400x400?portrait,professional" alt="Belyse Kalisa">
-                </div>
-            </div>
-        </div>
+    <section id="skills" class="section fade-in">
+      <h2>Professional Skills</h2>
+      <ul class="skills">
+        <li>Interface Design</li>
+        <li>Interactive Prototyping</li>
+        <li>HTML, CSS, JavaScript</li>
+        <li>ReactJS, NextJS</li>
+        <li>Adobe Illustrator, Photoshop, XD, Figma</li>
+        <li>Excellent Communication & Teamwork</li>
+      </ul>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="content">
-            <h2>Skills</h2>
-            <div class="skills-container">
-                <div class="skill-card">HTML5</div>
-                <div class="skill-card">CSS3</div>
-                <div class="skill-card">JavaScript</div>
-                <div class="skill-card">React.js</div>
-                <div class="skill-card">Node.js</div>
-                <div class="skill-card">Express.js</div>
-                <div class="skill-card">MongoDB</div>
-                <div class="skill-card">Git & GitHub</div>
-                <div class="skill-card">UI/UX Design</div>
-                <div class="skill-card">RESTful APIs</div>
-            </div>
-        </div>
+    <section id="experience" class="section fade-in">
+      <h2>Experience</h2>
+      <div class="job">
+        <h3>UI/UX Consultant - MINALOC/GIZ</h3>
+        <p>Worked with frontend developers to enhance the social registry system and website UX. Led user research and prototyping sessions.</p>
+      </div>
+      <div class="job">
+        <h3>UI/UX Designer - Ederner Labs</h3>
+        <p>Designed engaging interfaces for edutainment-based platforms. Consulted with clients, built personas, and tested for usability.</p>
+      </div>
+      <div class="job">
+        <h3>UI/UX Designer - KuickRent</h3>
+        <p>Created XD mockups, optimized UI flows, improved accessibility and overall visual consistency across the product.</p>
+      </div>
+      <div class="job">
+        <h3>Frontend Developer - Co-Creation Hub</h3>
+        <p>Implemented real-world designs using React/Next.js. Migrated projects from JS to TypeScript and wrote automated tests.</p>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="content">
-            <h2>Projects</h2>
-            <div class="slider">
-                <div class="slide active">
-                    <img src="https://source.unsplash.com/random/600x400?ecommerce" alt="E-Commerce Platform">
-                    <h3>Rwandan E-Commerce Platform</h3>
-                    <p>A full-stack e-commerce site built with React, Node.js, and MongoDB, featuring product listings, cart functionality, and secure payment integration.</p>
-                    <a href="https://github.com/belysekalisa/ecommerce" class="project-link">View Project</a>
-                </div>
-                <div class="slide">
-                    <img src="https://source.unsplash.com/random/600x400?health,app" alt="Health Tracker App">
-                    <h3>Health Tracker App</h3>
-                    <p>A web application for tracking health metrics, developed with React and Firebase, with real-time data visualization.</p>
-                    <a href="https://github.com/belysekalisa/health-tracker" class="project-link">View Project</a>
-                </div>
-                <div class="slide">
-                    <img src="https://source.unsplash.com/random/600x400?portfolio" alt="Portfolio Website">
-                    <h3>Portfolio Website</h3>
-                    <p>This personal portfolio, built with HTML, CSS, and JavaScript, showcasing my skills with a modern, responsive design.</p>
-                    <a href="https://github.com/belysekalisa/portfolio" class="project-link">View Project</a>
-                </div>
-                <button class="slider-btn prev">❮</button>
-                <button class="slider-btn next">❯</button>
-            </div>
-        </div>
+    <section id="education" class="section fade-in">
+      <h2>Education & Awards</h2>
+      <p><strong>Rwanda Coding Academy</strong><br>Diploma in Software Programming & Embedded Systems (2023)</p>
+      <ul>
+        <li>Microsoft Office Certificate</li>
+        <li>Ideation & Prototyping Certificate</li>
+        <li>Best Designer of the Year - RCA (2022)</li>
+      </ul>
     </section>
 
-    <!-- Video Showcase Section -->
-    <section id="showcase" class="section">
-        <div class="content">
-            <h2>Showcase</h2>
-            <div class="video-container">
-                <video controls poster="https://source.unsplash.com/random/800x450?tech">
-                    <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p>A demo reel showcasing my recent web development projects.</p>
-            </div>
-        </div>
+    <section id="contact" class="section contact fade-in">
+      <div class="info">
+        <h2>Let's Connect</h2>
+        <p><strong>Email:</strong> <a href="mailto:kalisabelyseteta@gmail.com">kalisabelyseteta@gmail.com</a></p>
+        <p><strong>Phone:</strong> +250 780 153 419</p>
+        <p><strong>Location:</strong> Kigali, Rwanda</p>
+      </div>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </section>
+  </main>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-        <div class="content">
-            <h2>Work Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>Full-Stack Developer</h3>
-                    <p>Tech Innovate Rwanda | Kigali | Jun 2023 - Present</p>
-                    <ul>
-                        <li>Developed scalable web applications using React and Node.js, serving over 10,000 monthly users.</li>
-                        <li>Designed RESTful APIs with Express.js and MongoDB, improving data retrieval efficiency by 25%.</li>
-                        <li>Led UI/UX enhancements, increasing user engagement by 20%.</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <h3>Junior Web Developer</h3>
-                    <p>Rwanda Coding Academy | Kigali | Jan 2022 - May 2023</p>
-                    <ul>
-                        <li>Built interactive web interfaces for educational platforms using HTML, CSS, and JavaScript.</li>
-                        <li>Contributed to open-source projects, enhancing code quality and documentation.</li>
-                        <li>Optimized website performance, reducing page load times by 15%.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+  <footer>
+    <p>&copy; 2025 Belyse Kalisa Teta Yamwakate</p>
+  </footer>
 
-    <!-- Education Section -->
-    <section id="education" class="section">
-        <div class="content">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>Bachelor of Science in Computer Science</h3>
-                <p>University of Rwanda, College of Science and Technology | Kigali | 2018 - 2022</p>
-                <p>Graduated with First Class Honours, specializing in web development and software engineering.</p>
-            </div>
-            <div class="education-item">
-                <h3>Certificate in Full-Stack Development</h3>
-                <p>Rwanda Coding Academy | Kigali | 2021</p>
-                <p>Intensive training in modern web technologies, including React, Node.js, and MongoDB.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="content">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <div class="form-group">
-                    <input type="text" id="name" placeholder="Your Name" required>
-                    <span class="error-message" id="name-error"></span>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" placeholder="Your Email" required>
-                    <span class="error-message" id="email-error"></span>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" placeholder="Your Message" required></textarea>
-                    <span class="error-message" id="message-error"></span>
-                </div>
-                <button type="submit">Send Message</button>
-            </form>
-            <p id="form-message"></p>
-            <div class="contact-info">
-                <p>Email: belyse.kalisa@example.com</p>
-                <p>Phone: (+250) 788-123-456</p>
-                <p>LinkedIn: linkedin.com/in/belysekalisa</p>
-                <p>GitHub: github.com/belysekalisa</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Belyse Kalisa. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <button id="themeToggle">🌙</button>
+  <script src="script.js"></script>
 </body>
 </html>

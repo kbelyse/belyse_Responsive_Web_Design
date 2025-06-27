@@ -1,111 +1,66 @@
-// Hamburger Menu Toggle
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+const canvas = document.getElementById("bgCanvas");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle(' Responses');
-    hamburger.classList.toggle('toggle');
-});
-
-// Smooth Scroll for Nav Links
-document.querySelectorAll('.nav-links a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
-        // Close mobile menu after clicking
-        navLinks.classList.remove('active');
-        hamburger.classList.remove('toggle');
-    });
-});
-
-// Project Slider
-const slides = document.querySelectorAll('.slide');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-let currentSlide = 0;
-
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-    });
+let circles = [];
+for (let i = 0; i < 60; i++) {
+  circles.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 2 + 1,
+    dx: (Math.random() - 0.5) * 0.5,
+    dy: (Math.random() - 0.5) * 0.5
+  });
 }
 
-prevBtn.addEventListener('click', () => {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let c of circles) {
+    ctx.beginPath();
+    ctx.arc(c.x, c.y, c.r, 0, Math.PI * 2);
+    ctx.fillStyle = "#fff";
+    ctx.fill();
+    c.x += c.dx;
+    c.y += c.dy;
+    if (c.x < 0 || c.x > canvas.width) c.dx *= -1;
+    if (c.y < 0 || c.y > canvas.height) c.dy *= -1;
+  }
+  requestAnimationFrame(animate);
+}
+animate();
+
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 });
 
-nextBtn.addEventListener('click', () => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
+const sections = document.querySelectorAll(".fade-in");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.2 });
+
+sections.forEach(sec => observer.observe(sec));
+
+const header = document.querySelector("header");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 20) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
 });
 
-// Initialize Slider
-showSlide(currentSlide);
-
-// Contact Form Validation
-const form = document.getElementById('contact-form');
-const nameInput = document.getElementById('name');
-const emailInput = document.getElementById('email');
-const messageInput = document.getElementById('message');
-const nameError = document.getElementById('name-error');
-const emailError = document.getElementById('email-error');
-const messageError = document.getElementById('message-error');
-const formMessage = document.getElementById('form-message');
-
-function validateName() {
-    const name = nameInput.value.trim();
-    if (name.length < 2) {
-        nameError.textContent = 'Name must be at least 2 characters long';
-        return false;
-    }
-    nameError.textContent = '';
-    return true;
-}
-
-function validateEmail() {
-    const email = emailInput.value.trim();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        emailError.textContent = 'Please enter a valid email address';
-        return false;
-    }
-    emailError.textContent = '';
-    return true;
-}
-
-function validateMessage() {
-    const message = messageInput.value.trim();
-    if (message.length < 10) {
-        messageError.textContent = 'Message must be at least 10 characters long';
-        return false;
-    }
-    messageError.textContent = '';
-    return true;
-}
-
-// Real-time validation
-nameInput.addEventListener('input', validateName);
-emailInput.addEventListener('input', validateEmail);
-messageInput.addEventListener('input', validateMessage);
-
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const isNameValid = validateName();
-    const isEmailValid = validateEmail();
-    const isMessageValid = validateMessage();
-
-    if (isNameValid && isEmailValid && isMessageValid) {
-        formMessage.textContent = 'Message sent successfully!';
-        formMessage.style.color = '#005F9E';
-        form.reset();
-        nameError.textContent = '';
-        emailError.textContent = '';
-        messageError.textContent = '';
-    } else {
-        formMessage.textContent = 'Please fix the errors above.';
-        formMessage.style.color = '#FF6F61';
-    }
+const themeToggle = document.getElementById("themeToggle");
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("light");
+  localStorage.setItem("theme", document.body.classList.contains("light") ? "light" : "dark");
 });
+
+if (localStorage.getItem("theme") === "light") {
+  document.body.classList.add("light");
+}
