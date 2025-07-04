@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
   <header>
@@ -22,84 +24,134 @@
       </ul>
       <div class="menu-icon" id="menuIcon">☰</div>
     </nav>
+    <div class="progress-bar" id="progressBar"></div>
   </header>
 
+  <canvas id="backgroundCanvas"></canvas>
   <section class="hero">
-    <canvas id="bgCanvas"></canvas>
     <div class="hero-content">
       <h1>Belyse Kalisa Teta Yamwakate</h1>
       <p>UI/UX Designer • Software Developer • Design Thinker</p>
-      <div class="scroll-down">&#8595;</div>
+      <div class="scroll-down">↓</div>
     </div>
   </section>
 
   <main>
-    <section id="about" class="section fade-in">
+    <section id="about" class="section">
       <h2>About Me</h2>
-      <p>I’ve always had a passion for creating beautiful spaces. With a curiosity to create my own, I pursued software development and focused on UI/UX design. I blend creativity with problem-solving, creating user-friendly solutions for community and personal ventures.</p>
-      <p>I thrive in collaborative environments and adapt quickly. Planning and time management have become my strengths, especially when working under pressure. I am committed to continuous learning and growth in all I do.</p>
+      <div class="about-container">
+        <div class="about-text">
+          <p>I’ve always had a passion for creating beautiful spaces. With a curiosity to create my own, I pursued software development and focused on UI/UX design. I blend creativity with problem-solving, crafting user-friendly solutions for community and personal ventures.</p>
+          <p>I thrive in collaborative environments, adapting quickly. Planning and time management are my strengths, especially under pressure. I’m committed to continuous learning and growth in all I do.</p>
+        </div>
+        <div class="about-image">
+          <img src="./me.jpeg" alt="Belyse Kalisa">
+        </div>
+      </div>
     </section>
 
-    <section id="skills" class="section fade-in">
+    <section id="skills" class="section">
       <h2>Professional Skills</h2>
-      <ul class="skills">
-        <li>Interface Design</li>
-        <li>Interactive Prototyping</li>
-        <li>HTML, CSS, JavaScript</li>
-        <li>ReactJS, NextJS</li>
-        <li>Adobe Illustrator, Photoshop, XD, Figma</li>
-        <li>Excellent Communication & Teamwork</li>
-      </ul>
+      <div class="skills-grid">
+        <div class="skill-card">User Interface Design</div>
+        <div class="skill-card">Wireframing & Prototyping</div>
+        <div class="skill-card">HTML, CSS, JavaScript</div>
+        <div class="skill-card">ReactJS & NextJS</div>
+        <div class="skill-card">Figma & Adobe XD</div>
+        <div class="skill-card">Team Collaboration</div>
+      </div>
     </section>
 
-    <section id="experience" class="section fade-in">
+    <section id="experience" class="section">
       <h2>Experience</h2>
-      <div class="job">
-        <h3>UI/UX Consultant - MINALOC/GIZ</h3>
-        <p>Worked with frontend developers to enhance the social registry system and website UX. Led user research and prototyping sessions.</p>
-      </div>
-      <div class="job">
-        <h3>UI/UX Designer - Ederner Labs</h3>
-        <p>Designed engaging interfaces for edutainment-based platforms. Consulted with clients, built personas, and tested for usability.</p>
-      </div>
-      <div class="job">
-        <h3>UI/UX Designer - KuickRent</h3>
-        <p>Created XD mockups, optimized UI flows, improved accessibility and overall visual consistency across the product.</p>
-      </div>
-      <div class="job">
-        <h3>Frontend Developer - Co-Creation Hub</h3>
-        <p>Implemented real-world designs using React/Next.js. Migrated projects from JS to TypeScript and wrote automated tests.</p>
+      <div class="experience-grid">
+        <div class="job-card">
+          <h3>UI/UX Consultant - MINALOC/GIZ</h3>
+          <p>2022 - 2023 | Kigali, Rwanda</p>
+          <p>Collaborated with frontend developers to enhance the social registry system's UX, conducting user research and designing interactive prototypes using Figma.</p>
+          <ul class="job-skills">
+            <li>UX Research</li>
+            <li>Prototyping</li>
+            <li>Teamwork</li>
+          </ul>
+        </div>
+        <div class="job-card">
+          <h3>UI/UX Designer - Ederner Labs</h3>
+          <p>2021 - 2022 | Remote</p>
+          <p>Designed intuitive interfaces for edutainment platforms, created user personas, and conducted usability testing to refine designs based on feedback.</p>
+          <ul class="job-skills">
+            <li>UI Design</li>
+            <li>User Testing</li>
+            <li>Client Communication</li>
+          </ul>
+        </div>
+        <div class="job-card">
+          <h3>Frontend Developer - Co-Creation Hub</h3>
+          <p>2020 - 2021 | Kigali, Rwanda</p>
+          <p>Developed responsive web applications using React and Next.js, migrated legacy code to TypeScript, and implemented unit tests for quality assurance.</p>
+          <ul class="job-skills">
+            <li>React Development</li>
+            <li>TypeScript</li>
+            <li>Testing</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section id="education" class="section fade-in">
+    <section id="education" class="section">
       <h2>Education & Awards</h2>
-      <p><strong>Rwanda Coding Academy</strong><br>Diploma in Software Programming & Embedded Systems (2023)</p>
-      <ul>
-        <li>Microsoft Office Certificate</li>
-        <li>Ideation & Prototyping Certificate</li>
-        <li>Best Designer of the Year - RCA (2022)</li>
-      </ul>
+      <div class="education-container">
+        <div class="education-item">
+          <h3>Rwanda Coding Academy</h3>
+          <p>Diploma in Software Programming & Embedded Systems (2023)</p>
+        </div>
+        <ul class="awards">
+          <li>Microsoft Office Certificate</li>
+          <li>Ideation & Prototyping Certificate</li>
+          <li>Best Designer of the Year - RCA (2022)</li>
+        </ul>
+      </div>
     </section>
 
-    <section id="contact" class="section contact fade-in">
-      <div class="info">
-        <h2>Let's Connect</h2>
-        <p><strong>Email:</strong> <a href="mailto:kalisabelyseteta@gmail.com">kalisabelyseteta@gmail.com</a></p>
-        <p><strong>Phone:</strong> +250 780 153 419</p>
-        <p><strong>Location:</strong> Kigali, Rwanda</p>
+    <section id="contact" class="section">
+      <h2>Connect With Me</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Email</h3>
+          <p><a href="mailto:kalisabelyseteta@gmail.com">kalisabelyseteta@gmail.com</a></p>
+        </div>
+        <div class="contact-card">
+          <h3>Phone</h3>
+          <p><a href="tel:+250780153419">+250 780 153 419</a></p>
+        </div>
+        <div class="contact-card">
+          <h3>Location</h3>
+          <p>Kigali, Rwanda</p>
+        </div>
+        <div class="contact-card">
+          <h3>Social</h3>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/kalisa-belyse-7b42311b6/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/kbelyse" target="_blank">GitHub</a>
+            <a href="https://twitter.com/belysekalisa" target="_blank">Twitter</a>
+          </div>
+        </div>
       </div>
-      <form id="contactForm">
+      <form id="contactForm" class="contact-form">
         <input type="text" id="name" placeholder="Your Name" required />
+        <span id="nameError" class="error"></span>
         <input type="email" id="email" placeholder="Your Email" required />
+        <span id="emailError" class="error"></span>
         <textarea id="message" placeholder="Your Message" required></textarea>
+        <span id="messageError" class="error"></span>
         <button type="submit">Send Message</button>
+        <div id="successSnackbar" class="success-snackbar"></div>
       </form>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Belyse Kalisa Teta Yamwakate</p>
+    <p>© 2025 Belyse Kalisa Teta Yamwakate</p>
   </footer>
 
   <button id="themeToggle">🌙</button>
